@@ -64,6 +64,8 @@ path="/etc/systemd/symlinks";
 desc="systemd unit symlinks directory";
 mkdir "$path" || dirfail "$desc";
 trycd "$path" "$desc";
+# create common symlink to dist directory systemd units
+trysymlink "$distdir/systemd" "nftfirewall" "common symlink for systemd unit files";
 
 # main units
 trycd "/etc/systemd/system" "systemd system units";
