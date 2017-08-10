@@ -70,6 +70,7 @@ trysymlink "$distdir/systemd" "nftfirewall" "common symlink for systemd unit fil
 # main units
 trycd "/etc/systemd/system" "systemd system units";
 trysymlink "../symlinks/nftfirewall/system/nft-firewall-setup.service" "." "nftfirewall setup service";
+trysymlink "../symlinks/nftfirewall/system/nft-firewall-reload.service" "." "nftfirewall reload service";
 trysymlink "../symlinks/nftfirewall/system/firewall-ready.target" "." "firewall target unit";
 
 # only start network manager after firewall target reached
